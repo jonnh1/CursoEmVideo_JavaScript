@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TesteJS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function acendeLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-acesa.jpg";    /*getElementById = ele vai pegar um elemento pelo id*/                   
+        }
+        function apagaLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-apagada.jpg";            
+        }
+        function quebraLampada() {
+            document.getElementById("luz").src = "_imagens/lampada-quebrada.jpg"
+            
+        }
+    </script>
+       
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="_imagens/lampada-apagada.jpg" alt="" srcset="" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()" >
+    <script>
+        
+    </script>
+    
+</body>
+</html>
