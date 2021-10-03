@@ -50,9 +50,16 @@
     
     
    <p> Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
-    <section id="conteudo" ></section>
-    <img src="_imagens/glass-esquema-marcado.jpg" alt="Oculos interativo">
+    <section id="conteudo" >
+    <img src="_imagens/glass-esquema-marcado.jpg" alt="Oculos interativo" usemap="#meumapa">
+    <map name="meumapa">
+        <area shape="rect" coords="268,254,185,213" href="google-glass.html#tela" target="janela"> <!--Dentro de um mapa, vc tem que informar o formato da area (shape),quais sao as coodernadas desse shape, qual arquivo vai ser aberto (href) e em que lugar ele vai abrir indicado pelo id,e qual o alvo (target) -->
+        <area shape="circle" coords="159,244,14" href="google-glass.html#camera" target="janela">
+        <area shape="circle" coords="76,52,12" href="google-glass.html#gadgets" target="janela">
+        <area shape="poly" coords="81,247,81,215,29,146,27,168" href="google-glass.html#sensores" target="janela">
+    </map>
     <iframe src="google-glass.html" frameborder="0" name="janela" id="frame-spec"></iframe>
+</section>
 </article>
 </section>
 
