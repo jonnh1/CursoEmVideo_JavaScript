@@ -229,4 +229,19 @@ footer#rodape p {
     text-align: center;
 }
 
+video#filme1{
+    display: block;
+    position: relative;
+    left: 30px;
+    top: -5px;
+    width: 440px;
+}
 
+video#filme2{
+    display: block;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 350px;
+
+} 
