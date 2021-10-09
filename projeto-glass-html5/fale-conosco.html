@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo Sobre Google Glass</title>
     <link rel="stylesheet"  href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
 </head>
 
 
@@ -33,39 +34,60 @@
         </nav>
 
     </header>
-
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
-
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <section id="corpo-full">
+        <article id="noticia-principal"><!--Uma mesma section pode ter varios article-->
+    <header id="cabecalho-artigo"> <!--Posso ter header pra criar cabecalho de qual quer coisa.-->
+        <hgroup>
+            <h3>Fale Conosco > &nbsp; Contato</h3>
+            <h1>Formulário de Contato</h1>
+            <h2>por Jonathan Valécio</h2>
+            <h3 class="direita">Atualizado em 10/2021</h3>
+        </hgroup>
+    </header>
+    </article>
+    </section>
 
 
-[BOTÃO ENVIAR]
+
+<form action="">
+    <fieldset id="usuario"> <!-- vai criar uma borda para seu proprio grupo -->
+        <legend >Identificação do Usuário</legend> <!-- tag legend é o titulo da porta-->
+            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Insira Seu Nome Completo"></p> <!--maioria dos objetos em html é destacado pela tag "input"-->
+            <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="10" maxlength="8" placeholder="8 dígitos" ></p>
+            <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="Insira seu Email"></p>
+            <fieldset>
+                <legend>Sexo</legend>
+                    <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label> <br> <!--Para nao ter erro eles devem ter o mesmo nome no NAME e poder marcar um ou o outro-->
+                    <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label><!--labels são usados para referenciar o objeto ao seu id-->
+            </fieldset>
+            <p><label for="cDate">Data de Nascimento:</label> <input type="date" name="tDate" id="cDate">u</p>
+    </fieldset>
+    
+    <fieldset id="endereco">
+        <legend>Endereço do Usuário</legend>
+            <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder=" Insira sua Rua"></p>
+            <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="9999" size="10" placeholder="Insira o Nº"></p>
+            <p><label for="cEst">Estado:</label> <input type="text" name="tEst" id="cEst" size="13" maxlength="80" placeholder="Insira Seu Estado"></p>
+            <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" size="13" maxlength="80" placeholder="Insira sua Cidade"></p>
+    </fieldset>
+    
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+            <p>Grau de Urgência: <input type="text" name="" id=""></p>
+            <p>Mensagem:</p>
+    </fieldset>
+    
+    <fieldset id="pedido">
+        <legend>Quero um Google Glass</legend>
+            Gostaria de adquirir um Google Glass quando disponível
+            Cor:
+            Quantidade:
+            Preço Total: R$
+    </fieldset>
+    
+    
+    [BOTÃO ENVIAR]
+</form>
 
 <footer id="rodape">
     <p> Copyright &copy; 2021 - by Jonathan <br> 
