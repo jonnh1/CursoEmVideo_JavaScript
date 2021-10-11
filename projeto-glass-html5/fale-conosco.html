@@ -49,7 +49,7 @@
 
 
 
-<form action="">
+<form method="POST" id="fContato" action="mailto:jonathanvalecio@hotmail.com">
     <fieldset id="usuario"> <!-- vai criar uma borda para seu proprio grupo -->
         <legend >Identificação do Usuário</legend> <!-- tag legend é o titulo da porta-->
             <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Insira Seu Nome Completo"></p> <!--maioria dos objetos em html é destacado pela tag "input"-->
@@ -67,22 +67,42 @@
         <legend>Endereço do Usuário</legend>
             <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder=" Insira sua Rua"></p>
             <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="9999" size="10" placeholder="Insira o Nº"></p>
-            <p><label for="cEst">Estado:</label> <input type="text" name="tEst" id="cEst" size="13" maxlength="80" placeholder="Insira Seu Estado"></p>
-            <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" size="13" maxlength="80" placeholder="Insira sua Cidade"></p>
+            <p><label for="cEst">Estado:</label>
+                 <select name="tEst" id="cEst" > 
+
+                     <optgroup label=" Região Nordeste">
+                         <option value="BA" selected> Bahia         </option>
+                     </optgroup> <!--Usa tag selected, quando tiver muitos acessos de algum estado pra deixar previamente setado-->
+
+                     <optgroup label=" Região Sudeste">
+                         <option value="SP"> São Paulo     </option>
+                         <option value="RJ"> Rio de Janeiro</option>
+                     </optgroup>
+
+                     <optgroup label=" Região Sul">
+                         <option value="PR"> Paraná        </option>
+                     </optgroup>                                
+                </select></p>
+            <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" size="20" maxlength="40" placeholder="Insira sua Cidade" list="cidades"></p>
+            <datalist id="cidades">
+                <option value="Rio de Janeiro"></option>
+                <option value="Salvador"></option>
+                <option value="Belford roxo"></option>
+            </datalist>
     </fieldset>
     
     <fieldset id="mensagem">
         <legend>Mensagem do Usuário</legend>
-            <p>Grau de Urgência: <input type="text" name="" id=""></p>
-            <p>Mensagem:</p>
+            <p><label for="cUrg">Grau de Urgência: Min</label> <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="5">Max </p>
+            <p><label for="cMsg">Mensagem:</label> <textarea name="tMsg" id="cMsg" cols="30" rows="10" placeholder="Deixe aqui sua mensagem"></textarea></p>
     </fieldset>
     
     <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-            Gostaria de adquirir um Google Glass quando disponível
-            Cor:
-            Quantidade:
-            Preço Total: R$
+            <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível <input type="text" name="" id=""></label></p>
+            <p><label for="cCor">Cor: <input type="text" name="" id=""> </label></p>
+            <p><label for="cQtd">Quantidade: <input type="text" name="" id=""></label></p>
+            <p><label for="cTot">Preço Total: R$ <input type="text" name="" id=""></label></p>
     </fieldset>
     
     
