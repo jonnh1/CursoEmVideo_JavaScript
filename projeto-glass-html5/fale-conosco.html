@@ -12,6 +12,14 @@
 
 <script src="_javascript/funcoes.js"> 
 </script>
+<Script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);  /*parseInt = converter pra inteiro*/
+        tot = qtd * 1500;
+        document.getElementById('cTot').value = tot;
+        
+    }
+</Script>
 
 
 <body>
@@ -49,7 +57,7 @@
 
 
 
-<form method="POST" id="fContato" action="mailto:jonathanvalecio@hotmail.com">
+<form method="POST" id="fContato" action="mailto:jonathanvalecio@hotmail.com" oninput="calc_total();">
     <fieldset id="usuario"> <!-- vai criar uma borda para seu proprio grupo -->
         <legend >Identificação do Usuário</legend> <!-- tag legend é o titulo da porta-->
             <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Insira Seu Nome Completo"></p> <!--maioria dos objetos em html é destacado pela tag "input"-->
@@ -99,14 +107,15 @@
     
     <fieldset id="pedido">
         <legend>Quero um Google Glass</legend>
-            <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível <input type="text" name="" id=""></label></p>
-            <p><label for="cCor">Cor: <input type="text" name="" id=""> </label></p>
-            <p><label for="cQtd">Quantidade: <input type="text" name="" id=""></label></p>
-            <p><label for="cTot">Preço Total: R$ <input type="text" name="" id=""></label></p>
+            <p> <input type="checkbox" name="tPed" id="cPed">
+                <label for="cPed">  Gostaria de adquirir um Google Glass quando disponível </label></p>
+            <p><label for="cCor">Cor: <input type="color" name="tCor" id="cCor" value="#0000FF"> </label></p>
+            <p><label for="cQtd">Quantidade: <input type="number" name="tQtd" id="cQtd" min="0" max="5"></label></p>
+            <p><label for="cTot">Preço Total: R$ <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly ></label></p> <!--readonly: tag somente pra leitura-->
     </fieldset>
     
-    
-    [BOTÃO ENVIAR]
+
+    <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
 </form>
 
 <footer id="rodape">
